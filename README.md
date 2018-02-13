@@ -185,17 +185,6 @@ CustomSearch:
   search_controller: SearchPage #page type to show the search
 ```
 
-### Note
-
-Searchable DataObjects module use Mysql NATURAL LANGUAGE MODE search method, so during your tests be sure not to have all DataObjetcs
-with the same content, since words that are present in 50% or more of the rows are considered common and do not match.
-
-From MySQL manual entry [http://dev.mysql.com/doc/refman/5.1/en/fulltext-search.html]:
-
-A natural language search interprets the search string as a phrase in natural human language (a phrase in free text). There are no special operators.
-The stopword list applies. In addition, words that are present in 50% or more of the rows are considered common and do not match.
-Full-text searches are natural language searches if the IN NATURAL LANGUAGE MODE modifier is given or if no modifier is given.
-
 ### TODO
 
  * Add other search method in configuration

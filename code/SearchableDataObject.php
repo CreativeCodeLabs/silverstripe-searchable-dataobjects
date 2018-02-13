@@ -68,7 +68,7 @@ class SearchableDataObject extends DataExtension
         $schema = DB::get_schema();
         $isMySQL = ($connection->getDatabaseServer() === 'mysql');
         $unsigned = ($isMySQL) ? 'unsigned' : '';
-        $extraOptions = ($isMySQL) ? ' ENGINE=MyISAM' : '';
+        $extraOptions = ($isMySQL) ? ' ENGINE=InnoDB' : '';
 
         // construct query to create table with custom primary key
         $sql = join(' ', [
